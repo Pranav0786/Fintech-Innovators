@@ -1,0 +1,75 @@
+.services-container{
+    /* background-color: black; */
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-contaicer-in{
+    /* background-color: red; */
+    width: 80%; 
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: 50px;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+.service-contaicer-in:hover{
+    background-color: rgb(40,61,103);
+    transform:perspective(300px) translateZ(-50px) ;
+    transition: transform 0.5s ease;
+    box-shadow: 0px 0px 20px white;
+}
+
+.services-all{
+    /* background-color: aqua; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-img{
+    height: 28vh;
+    border-radius: 30px;
+    display: block;
+}
+.service{
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 35%;
+    position: relative;
+}
+.caption{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,15,152,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+    padding-top: 70%;
+    transition: 0.4s;
+}
+.service:hover .caption{
+    opacity: 1;
+    padding-top: 0;
+}
