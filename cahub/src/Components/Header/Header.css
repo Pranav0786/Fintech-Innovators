@@ -19,6 +19,7 @@
 }
 .header-heading{
     animation: pulse 1s infinite alternate;
+    color: rgb(97,206,166);
 }
 
 @keyframes slideInX {
@@ -41,6 +42,8 @@
     line-height: 1.4;
     margin: 10px auto 20px;
     font-size: 20px;
+    color: rgb(238,195,104);
+    font-weight: 600;
 }
 .header-arrow-btn{
     justify-content: center;

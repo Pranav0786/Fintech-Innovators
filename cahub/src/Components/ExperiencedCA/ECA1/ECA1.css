@@ -1,0 +1,123 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(2,4,43);
+    color: #ffffff;
+}
+
+/* Container Styles */
+.eca1-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(2,4,43);
+}
+
+/* Left Section Styles */
+.eca1-left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eca1-img {
+    height: 60vh;
+    animation: slideInFromTop 1s ease forwards;
+}
+
+.eca1-right {
+    /* background-color: red; */
+    width: 50%;
+    padding: 30px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.eca1-heading {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.eca1-text {
+    max-width: 80%;
+    height: 30vh;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.eca1-r-buttons {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+/* Button Styles */
+.eca1-btn {
+    background-color: rgb(20,31,95); /* Orange */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.eca1-btn:hover {
+    
+    background-color: rgb(2,253,208); /* Darker Orange */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1280px) {
+    .eca1-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .eca1-r-buttons {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .eca1-right {
+        gap: 50px;
+    }
+
+    .eca1-text {
+        height: 50vh;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-10%);
+        opacity: 1;
+    }
+}

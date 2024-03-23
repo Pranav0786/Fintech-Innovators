@@ -10,7 +10,7 @@ export const About = () => {
         <div className='about-in'>
             <div className="about-left">
                 <img src={aboutus} alt="" className='about-img'/>
-                <img src={play_icon} alt="" className='play_icon'/>
+                {/* <img src={play_icon} alt="" className='play_icon'/> */}
             </div>
 
             <div className="about-left">
