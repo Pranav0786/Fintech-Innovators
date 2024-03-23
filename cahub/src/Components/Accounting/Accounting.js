@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, onSnapshot, addDoc } from 'firebase/firestore';
 import './Accounting.css'
+import img from '../../Assets/accounting-img.png'
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -63,8 +64,9 @@ const AccountingApp = () => {
 
     return (
         <div className="accounting-container">
+            
             <div className='accounting-left'>
-                <h2>Debit Transactions</h2>
+                <h2 className='accounting-heading'>Debit Transactions</h2>
                 <form onSubmit={handleDebitSubmit} className="accounting-form">
                     <input type="text" value={debitName} onChange={(e) => setDebitName(e.target.value)} className="accounting-input" placeholder="Name" />
                     <input type="number" value={debitAmount} onChange={(e) => setDebitAmount(e.target.value)} className="accounting-input" placeholder="Amount" />
@@ -91,7 +93,7 @@ const AccountingApp = () => {
             </div>
 
             <div className='accounting-right'>
-                <h2>Credit Transactions</h2>
+                <h2 className='accounting-heading'>Credit Transactions</h2>
                 <form onSubmit={handleCreditSubmit} className="accounting-form">
                     <input type="text" value={creditName} onChange={(e) => setCreditName(e.target.value)} className="accounting-input" placeholder="Name" />
                     <input type="number" value={creditAmount} onChange={(e) => setCreditAmount(e.target.value)} className="accounting-input" placeholder="Amount" />
@@ -116,6 +118,11 @@ const AccountingApp = () => {
 
                 
             </div>
+
+            <div className='accounting-middle'>
+                <img src={img} className='accounting-img' alt=''></img>
+            </div>
+
         </div>
     );
 };
