@@ -1,0 +1,45 @@
+/* Accounting.css */
+
+/* Container styles */
+.accounting-container {
+  margin: 20px;
+}
+
+/* Table styles */
+.accounting-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.accounting-table th,
+.accounting-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Form styles */
+.accounting-form {
+  margin-bottom: 20px;
+}
+
+.accounting-input {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.accounting-button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accounting-button:hover {
+  background-color: #0056b3;
+}

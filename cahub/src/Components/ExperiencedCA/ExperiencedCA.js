@@ -9,7 +9,6 @@ const ExperiencedCA = () => {
     <div className='eca-container'>
       <Navbar/>
       <ECA1/>
-      <transaction />
     </div>
   )
 }

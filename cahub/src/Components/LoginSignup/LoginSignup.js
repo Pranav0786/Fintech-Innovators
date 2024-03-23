@@ -22,30 +22,30 @@ const LoginSignup = () => {
     }));
   };
 
+
   const handleSubmit = async (e) => {
     console.log(formData) ;
     e.preventDefault();
     try {
-      const res = await fetch('http://10.40.13.53:8000/api/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)  
-      });
-      const response = await res.json();
-      if (response.success) {
-        // Handle success, e.g., redirect to dashboard
-        // console.log('Signup successful');
-        console.log(response) ;
-      } else {
-        // Handle error
-        console.error('Signup failed');
-      }
+        const res = await fetch('http://10.40.13.53:8000/api/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)  
+        });
+        const response = await res.json();
+        if (response.success) {
+            // Handle success, e.g., redirect to dashboard
+            console.log(response.message);
+        } else {
+            // Handle error
+            console.error(response.message);
+        }
     } catch (error) {
-      console.error('Error:', error);
+        console.error('Error:', error);
     }
-  };
+};
 
   return (
     <form onSubmit={handleSubmit}>
