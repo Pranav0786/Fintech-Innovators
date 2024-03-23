@@ -81,6 +81,7 @@ const LoginSignin = () => {
           <div className="signup-buttons">
             <div className="signup-l-button">
               <select className="signup-loginas" name="userType" value={formData.userType} onChange={handleChange} >
+              <option className="signup-Experienced-CA">Select Option</option>
                 <option className="signup-Experienced-CA">Experienced CA</option>
                 <option className="signup-Businessman">Businessman</option>
                 <option className="signup-New-CA">New CA</option>

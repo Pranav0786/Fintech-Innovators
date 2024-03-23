@@ -102,7 +102,7 @@ const LoginSignup = () => {
             <div className="signup-buttons">
               <div className="signup-l-button">
                 <select className="signup-loginas" name="userType" value={formData.userType} onChange={handleChange}> 
-                <option className="signup-Businessman" id='0'>Select Type</option>
+                  <option className="signup-Businessman" id='0'>Select Type</option>
                   <option className="signup-Experienced-CA" id='1'>Experienced CA</option>
                   <option className="signup-Businessman" id='2'>Businessman</option>
                   <option className="signup-New-CA" id='3'>New CA</option>
