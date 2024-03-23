@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react'
-import logo from '../../Assets/CAA_logo.png'
+import logo from '../../Assets/final-logo.png'
 import './Navbar.css'
 
 const Navbar = () => {
