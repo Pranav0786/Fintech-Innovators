@@ -89,7 +89,7 @@ const BusinessmanRegistration = () => {
                             variant="outlined"
                             fullWidth
                             multiline
-                            rows={4}
+                            minRows={4}
                             className="input-field"
                             value={formData.description}
                             onChange={(e) => setFormData({ ...formData, description: e.target.value })}

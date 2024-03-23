@@ -87,7 +87,34 @@ export const BusinessmanHeader = () => {
                 </DialogTitle>
                 <DialogContent>
                     <Grid container spacing={3}>
-                        {/* Rest of the code remains unchanged */}
+                        <Grid item xs={6}>
+                            <FilledInput name="title" value={jobInfo.title} onChange={handleChange} placeholder="Job Title *" disableUnderline fullWidth />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Select name="type" value={jobInfo.type} onChange={handleChange} fullWidth>
+                                <MenuItem value="Full time">Full Time</MenuItem>
+                                <MenuItem value="Part time">Part Time</MenuItem>
+                                <MenuItem value="Contract">Contract</MenuItem>
+                            </Select>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <FilledInput name="link" value={jobInfo.link} onChange={handleChange} placeholder="Job Link *" disableUnderline fullWidth />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Select name="location" value={jobInfo.location} onChange={handleChange} fullWidth>
+                                <MenuItem value="Remote">Remote</MenuItem>
+                                <MenuItem value="In-office">In-office</MenuItem>
+                            </Select>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <FilledInput name="experience" value={jobInfo.experience} onChange={handleChange} placeholder="Experience Required *" disableUnderline fullWidth />
+                        </Grid>
+                        <Grid item xs={6}>
+                            <FilledInput name="graduationYear" value={jobInfo.graduationYear} onChange={handleChange} placeholder="Graduation year *" disableUnderline fullWidth />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <FilledInput name="description" value={jobInfo.description} onChange={handleChange} placeholder="Job Description *" disableUnderline fullWidth multiline rows={5} />
+                        </Grid>
                     </Grid>
                 </DialogContent>
                 <DialogActions>
@@ -111,7 +138,7 @@ export const BusinessmanHeader = () => {
                                     <Typography variant="subtitle1">Location: {job.location}</Typography>
                                     <Typography variant="subtitle1">Experience Required: {job.experience}</Typography>
                                     <Typography variant="subtitle1">Description: {job.description}</Typography>
-                                    {/* Add unique key prop */}
+                                   
                                 </Box>
                             ))}
                         </Box>
