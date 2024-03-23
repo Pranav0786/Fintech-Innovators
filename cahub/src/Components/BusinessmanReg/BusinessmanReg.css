@@ -1,0 +1,60 @@
+.bus-reg-container{
+    width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+    /* background-color: black; */
+}
+.bus-reg-container-in{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+}
+
+.registration-heading {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    background-color: rgb(8, 8, 8);
+    text-align: center; 
+    padding: 20px;
+    color: rgb(97,206,166);
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+    padding: 20px; 
+}
+
+.input-field {
+    margin-bottom: 20px; 
+    background-color: white;
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 30px; 
+    color: aliceblue;
+    margin-top: 10%;
+}
+
+.document-upload {
+    margin-top: 15px;
+    margin-bottom: 30px; 
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background-color: aliceblue;
+    align-items: center;
+}
+
+.register-button {
+    margin-top: 20px;
+    background-color: aliceblue;
+    width: 50%; 
+    box-sizing: border-box; 
+    align-self: center; 
+    border: 1px solid #ccc; 
+    padding: 10px;
+    text-align: center; 
+}

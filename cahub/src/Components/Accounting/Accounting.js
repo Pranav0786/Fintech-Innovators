@@ -1,21 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, onSnapshot, addDoc } from 'firebase/firestore';
-import './Accounting.css'
-import img from '../../Assets/accounting-img.png'
-
-// Initialize Firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyApaO5VzsZ2LyTHIgSvmrXl1wHF22t6onA",
-    authDomain: "accounting-570c1.firebaseapp.com",
-    projectId: "accounting-570c1",
-    storageBucket: "accounting-570c1.appspot.com",
-    messagingSenderId: "1019039784746",
-    appId: "1:1019039784746:web:dc348ed1cdc4efd32e0853"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+import { collection, onSnapshot, addDoc } from 'firebase/firestore'; 
+import db from '../Firebase/Firebase'; 
+import './Accounting.css';
+import img from '../../Assets/accounting-img.png';
 
 const AccountingApp = () => {
     const [debitTransactions, setDebitTransactions] = useState([]);
@@ -60,7 +47,7 @@ const AccountingApp = () => {
         });
         setCreditName('');
         setCreditAmount('');
-    };
+    };  
 
     return (
         <div className="accounting-container">

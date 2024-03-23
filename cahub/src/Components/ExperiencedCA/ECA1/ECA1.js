@@ -27,7 +27,7 @@ const ECA1 = () => {
                         <button className='eca1-btn'>Accounting</button>
                     </Link>
             
-                    <Link to='/'>
+                    <Link to='/taxation'>
                         <button className='eca1-btn'>Taxation</button>
                     </Link>
 

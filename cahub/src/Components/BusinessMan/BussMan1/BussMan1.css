@@ -1,0 +1,79 @@
+
+.bus-container{
+    /* background-color: black; */
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+.bus-left{
+    width: 50%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bus-img{
+    height: 80vh;
+    animation: pulse 1s infinite alternate;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+.bus-right{
+    /* background-color: green; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.bus-heading{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.bus-text{
+    /* background-color: aqua; */
+    max-width: 80%;
+    height: 25vh;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.bus-r-buttons{
+    /* background-color: black; */
+    height: 30vh;
+    width: 200px;
+    display: flex ;
+    flex-direction: column;
+    list-style: none;
+    font-size: 16px;
+    gap: 20px;
+}
+.bus-btn{
+    background-color: rgb(250, 246, 246);
+    height: 5vh;
+    width: 100px;
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 15px;
+    color: black;
+}
+.bus-btn:hover{
+    background-color: yellow;
+}

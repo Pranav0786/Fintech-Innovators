@@ -9,7 +9,9 @@ import Services from './Components/Services/Services.js';
 import About from './Components/About/About.js';
 import ExperiencedCA from './Components/ExperiencedCA/ExperiencedCA.js'
 import Accounting from './Components/Accounting/Accounting.js'
-
+import Taxation from './Components/Taxation/Taxation.js';
+import BusinessmanReg from './Components/BusinessmanReg/BusinessmanReg.js'
+import Joblisting from './Components/JobListing/JobListing.jsx'
 
 function App() {
   return (
@@ -25,6 +27,11 @@ function App() {
         <Route path='/about' element={<About/>} />
         <Route path='/experiencedCA' element={<ExperiencedCA/>} />
         <Route path='/accounting' element= {<Accounting/>} /> 
+        <Route path= '/taxation' element= {<Taxation/>} />
+        <Route path='/businessmanreg' element = { <BusinessmanReg/>} />
+        <Route path='/joblisting' element= {<Joblisting/> }/>
+        
+        
       </Routes>
     </Router>
   );
