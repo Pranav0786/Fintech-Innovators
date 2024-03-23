@@ -63,53 +63,59 @@ const AccountingApp = () => {
 
     return (
         <div className="accounting-container">
-            <h2>Debit Transactions</h2>
-            <table className="accounting-table">
-                <thead>
-                    <tr>
-                        <th className="accounting-th">Name</th>
-                        <th className="accounting-th">Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {debitTransactions.map(transaction => (
-                        <tr key={transaction.id}>
-                            <td className="accounting-td">{transaction.name}</td>
-                            <td className="accounting-td">{transaction.amount}</td>
+            <div className='accounting-left'>
+                <h2>Debit Transactions</h2>
+                <form onSubmit={handleDebitSubmit} className="accounting-form">
+                    <input type="text" value={debitName} onChange={(e) => setDebitName(e.target.value)} className="accounting-input" placeholder="Name" />
+                    <input type="number" value={debitAmount} onChange={(e) => setDebitAmount(e.target.value)} className="accounting-input" placeholder="Amount" />
+                    <button type="submit" className="accounting-button">Add Debit Transaction</button>
+                </form>
+                <table className="accounting-table">
+                    <thead>
+                        <tr>
+                            <th className="accounting-th">Name</th>
+                            <th className="accounting-th">Amount</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {debitTransactions.map(transaction => (
+                            <tr key={transaction.id}>
+                                <td className="accounting-td">{transaction.name}</td>
+                                <td className="accounting-td">{transaction.amount}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
 
-            <form onSubmit={handleDebitSubmit} className="accounting-form">
-                <input type="text" value={debitName} onChange={(e) => setDebitName(e.target.value)} className="accounting-input" placeholder="Name" />
-                <input type="number" value={debitAmount} onChange={(e) => setDebitAmount(e.target.value)} className="accounting-input" placeholder="Amount" />
-                <button type="submit" className="accounting-button">Add Debit Transaction</button>
-            </form>
+                
+            </div>
 
-            <h2>Credit Transactions</h2>
-            <table className="accounting-table">
-                <thead>
-                    <tr>
-                        <th className="accounting-th">Name</th>
-                        <th className="accounting-th">Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {creditTransactions.map(transaction => (
-                        <tr key={transaction.id}>
-                            <td className="accounting-td">{transaction.name}</td>
-                            <td className="accounting-td">{transaction.amount}</td>
+            <div className='accounting-right'>
+                <h2>Credit Transactions</h2>
+                <form onSubmit={handleCreditSubmit} className="accounting-form">
+                    <input type="text" value={creditName} onChange={(e) => setCreditName(e.target.value)} className="accounting-input" placeholder="Name" />
+                    <input type="number" value={creditAmount} onChange={(e) => setCreditAmount(e.target.value)} className="accounting-input" placeholder="Amount" />
+                    <button type="submit" className="accounting-button">Add Credit Transaction</button>
+                </form>
+                <table className="accounting-table">
+                    <thead>
+                        <tr>
+                            <th className="accounting-th">Name</th>
+                            <th className="accounting-th">Amount</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {creditTransactions.map(transaction => (
+                            <tr key={transaction.id}>
+                                <td className="accounting-td">{transaction.name}</td>
+                                <td className="accounting-td">{transaction.amount}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
 
-            <form onSubmit={handleCreditSubmit} className="accounting-form">
-                <input type="text" value={creditName} onChange={(e) => setCreditName(e.target.value)} className="accounting-input" placeholder="Name" />
-                <input type="number" value={creditAmount} onChange={(e) => setCreditAmount(e.target.value)} className="accounting-input" placeholder="Amount" />
-                <button type="submit" className="accounting-button">Add Credit Transaction</button>
-            </form>
+                
+            </div>
         </div>
     );
 };

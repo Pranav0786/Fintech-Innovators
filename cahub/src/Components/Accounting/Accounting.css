@@ -2,7 +2,25 @@
 
 /* Container styles */
 .accounting-container {
-  margin: 20px;
+  background-color: red;
+  margin: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width:1300px) {
+  .accounting-container {
+    background-color: red;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.accounting-right{
+  background-color: gray;
+}
+.accounting-left{
+  background-color: green;
 }
 
 /* Table styles */
