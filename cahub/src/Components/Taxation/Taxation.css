@@ -1,5 +1,4 @@
 .taxation-container {
-    /* background-color: #f0f0f0; */
     padding: 20px;
     border-radius: 10px;
     width: 100%;
@@ -9,16 +8,12 @@
     justify-content: space-evenly;
 }
 .taxation-left{
-    /* background-color: red; */
+   
     width: auto;
 }
-.taxation-right{
-    /* background-color: green; */
-}
-
 .taxation-heading {
-    font-size: 24px;
-    color: #333;
+    font-size: 2.8rem;
+    color: rgb(97,206,166);
     margin-bottom: 15px;
 }
 

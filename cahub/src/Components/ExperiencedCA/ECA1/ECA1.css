@@ -49,13 +49,15 @@ body {
 .eca1-heading {
     font-size: 3rem;
     font-weight: bold;
+    color: rgb(97,206,166);
 }
 
 .eca1-text {
     max-width: 80%;
     height: 30vh;
     font-weight: 500;
-    font-size: larger;
+    font-size: 1.3rem;
+    color: rgb(238,195,104);
 }
 
 .eca1-r-buttons {

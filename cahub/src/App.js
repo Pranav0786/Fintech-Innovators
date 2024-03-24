@@ -12,6 +12,8 @@ import Accounting from './Components/Accounting/Accounting.js'
 import Taxation from './Components/Taxation/Taxation.js';
 import BusinessmanReg from './Components/BusinessmanReg/BusinessmanReg.js'
 import Joblisting from './Components/JobListing/JobListing.jsx'
+// import Audit from './Components/Audit/Auditmain.js'
+
 
 function App() {
   return (
@@ -30,7 +32,7 @@ function App() {
         <Route path= '/taxation' element= {<Taxation/>} />
         <Route path='/businessmanreg' element = { <BusinessmanReg/>} />
         <Route path='/joblisting' element= {<Joblisting/> }/>
-        
+        {/* <Route path='/audit' element={<Audit/>} /> */}
         
       </Routes>
     </Router>

@@ -1,0 +1,20 @@
+.audit-container-in {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .audit-details {
+    margin-top: 20px;
+  }
+  
+  .status-right {
+    color: #28a745;
+  }
+  
+  .status-wrong {
+    color: #dc3545;
+  }
+  

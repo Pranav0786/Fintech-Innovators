@@ -36,9 +36,6 @@ const LoginSignin = () => {
           else if(response.usertype === "New CA")
             navigate('/');
 
-          // console.log(response.usertype) ;
-          // If sign-in is successful, navigate to the next page
-          // history.push('/next-page');
         } else {
           console.log(response.message);
         }
@@ -93,6 +90,15 @@ const LoginSignin = () => {
               </Link>
             </div>
           </div>
+
+          <div className='in-not-register'>
+            <h3>Not Register yet</h3>
+            <Link to="/signup">
+              <button className="signup-signup" >SignUp</button>
+            </Link>
+
+          </div>
+
         </div>
 
         <div className="signup-right">

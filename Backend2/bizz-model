@@ -1,0 +1,32 @@
+const mongoose = require("mongoose");
+
+const businessmanSchema = new mongoose.Schema({
+    businessName: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    businessmanName: {
+        type: String,
+        required: true
+    },
+    caName: {
+        type: String,
+        required: true
+    },
+    address: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String
+    }
+});
+
+const Businessman = mongoose.model("Businessman", businessmanSchema);
+
+module.exports = Businessman;
