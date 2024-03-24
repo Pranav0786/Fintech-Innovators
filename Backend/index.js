@@ -2,6 +2,7 @@ const express=require("express");
 const jwt=require("jsonwebtoken");
 const mongoose=require("mongoose");
 const bcryptjs=require("bcryptjs");
+const bizzModal = require("./bizz-model"); 
 const cors=require("cors");
 const app=express();
 app.use(cors());
@@ -11,7 +12,7 @@ const userModal=require("./user-model");
 
 mongoose.connect("mongodb://localhost:27017/Backend").then(()=>
 {
-    console.log("Database is connected successfully");
+    console.log("Database is connected successfully");  
 }
 ).catch((err)=>
 {
@@ -87,5 +88,23 @@ app.post("/api/signin",(req,res)=>{
           })
   
   })
+
+  app.post('/api/register', async (req, res) => {
+    console.log("Endpoint called");
+    const data = req.body; 
+    try {
+      const doc = await bizzModal.create(data);
+      res.send({
+        message: "Admin Registered Successfully",
+        success: true,
+      });
+    } catch (err) {
+      console.error(err);
+      res.status(500).send({
+        message: "Unable To Register Admin. Please Try Again",
+        success: false,
+      });
+    }
+  });
   
   app.listen(8000, console.log("server is start and Running"));
