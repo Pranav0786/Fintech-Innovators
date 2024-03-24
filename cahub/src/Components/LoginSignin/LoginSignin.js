@@ -14,8 +14,7 @@ const LoginSignin = () => {
 
     const [formData, setFormData] = useState({ username: '', password: '' ,userType:''});
     const [error, setError] = useState('');
-    // const history = useHistory();
-  
+   
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
@@ -32,9 +31,9 @@ const LoginSignin = () => {
           if( response.usertype === "Experienced CA")
             navigate('/experiencedCA');
           else if(response.usertype === "Businessman")
-            navigate('/businessMan');
+            navigate('/businessmanreg');
           else if(response.usertype === "New CA")
-            navigate('/');
+            navigate('/busheader');
 
         } else {
           console.log(response.message);

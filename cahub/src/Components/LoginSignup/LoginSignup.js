@@ -36,10 +36,8 @@ const LoginSignup = () => {
         });
         const response = await res.json();
         if (response.success) {
-            // Handle success, e.g., redirect to dashboard
             console.log(response.message);
         } else {
-            // Handle error
             console.error(response.message);
         }
     } catch (error) {

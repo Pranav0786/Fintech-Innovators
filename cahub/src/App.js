@@ -12,7 +12,8 @@ import Accounting from './Components/Accounting/Accounting.js'
 import Taxation from './Components/Taxation/Taxation.js';
 import BusinessmanReg from './Components/BusinessmanReg/BusinessmanReg.js'
 import Joblisting from './Components/JobListing/JobListing.jsx'
-// import Audit from './Components/Audit/Auditmain.js'
+import BusinessmanHeader from './Components/Businessman_Header/index.jsx';
+import Business from './Components/BusinessMan/BusinessMan.js' ;
 
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
         <Route path= '/taxation' element= {<Taxation/>} />
         <Route path='/businessmanreg' element = { <BusinessmanReg/>} />
         <Route path='/joblisting' element= {<Joblisting/> }/>
-        {/* <Route path='/audit' element={<Audit/>} /> */}
+        <Route path= '/busheader' element = {<BusinessmanHeader/>} /> 
+        <Route path='/businessman' element = {<Business/>} />
         
       </Routes>
     </Router>

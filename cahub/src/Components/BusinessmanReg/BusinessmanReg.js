@@ -32,6 +32,9 @@ const BusinessmanRegistration = () => {
                 },
                 body: JSON.stringify(formData)
             });
+            if (res.ok) {
+                window.location.href = "../BusinessMan/"; 
+            }
         } catch (error) {
             console.error('Error occurred during form submission:', error);
         }

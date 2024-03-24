@@ -131,7 +131,7 @@ export const BusinessmanHeader = () => {
                     <Grid container style={{ justifyContent: "center" }}>
                         <Box mt={2}>
                             {postedJobs.map((job, index) => (
-                                <Box key={index} style={{ padding: '20px', backgroundColor: 'Blue', marginBottom: '10px', marginTop: '10px', justifyContent: 'center' }}>
+                                <Box key={index} style={{ padding: '20px', backgroundColor: 'transparent', border:'1px solid white',marginBottom: '10px', borderRadius:'20px',boxShadow: '0px 2px 4px rgba(10, 10, 10, 1)', marginTop: '10px', justifyContent: 'center' }}>
                                     <Typography variant="h6">{job.title}</Typography>
                                     <Typography variant="subtitle1">Type: {job.type}</Typography>
                                     <Typography variant="subtitle1">Company URL: {job.link}</Typography>
