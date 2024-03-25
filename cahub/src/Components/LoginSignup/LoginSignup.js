@@ -3,10 +3,11 @@ import './LoginSignup.css';
 import { FaUserCircle } from 'react-icons/fa';
 import { MdEmail} from 'react-icons/md';
 import { RiLockPasswordFill } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Remove Link import
 import img10 from '../../Assets/login-page-removebg-preview.png';
 
 const LoginSignup = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -22,29 +23,39 @@ const LoginSignup = () => {
     }));
   };
 
-
   const handleSubmit = async (e) => {
-    console.log(formData) ;
     e.preventDefault();
     try {
-        const res = await fetch('https://fintech-innovators.onrender.com/api/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)  
-        });
-        const response = await res.json();
-        if (response.success) {
-            console.log(response.message);
-            // window.location.href = ''
-        } else {
-            console.error(response.message);
+      const res = await fetch('https://fintech-innovators.onrender.com/api/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)  
+      });
+      const response = await res.json();
+      if (response.success) {
+        console.log(response.message);
+        switch (response.usertype) {
+          case "Experienced CA":
+            navigate('/experiencedCA');
+            break;
+          case "Businessman":
+            navigate('/businessmanreg');
+            break;
+          case "New CA":
+            navigate('/busheader');
+            break;
+          default:
+            console.error("Unknown user type:", response.usertype);
         }
+      } else {
+        console.error(response.message);
+      }
     } catch (error) {
-        console.error('Error:', error);
+      console.error('Error:', error);
     }
-};
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -81,7 +92,8 @@ const LoginSignup = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                required/>
+                  required
+                />
               </div>
               <div className="signup-input">
                 <div className="signup-name-icon">
@@ -94,7 +106,8 @@ const LoginSignup = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                required/>
+                  required
+                />
               </div>
             </div>
 
@@ -108,9 +121,7 @@ const LoginSignup = () => {
                 </select>
               </div>
               <div className="signup-r-button">
-                <Link to="/dashboard">
-                  <button className="signup-signup" type='submit' onClick={handleSubmit}>SignUp</button>
-                </Link>
+                <button className="signup-signup" type='submit'>SignUp</button>
               </div>
             </div>
           </div>
