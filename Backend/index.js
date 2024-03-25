@@ -10,7 +10,7 @@ app.use(express.json());
 
 const userModal=require("./user-model");
 
-mongoose.connect("mongodb://localhost:27017/Backend").then(()=>
+mongoose.connect("mongodb+srv://system:root@taskmastercahub.rb0lv9k.mongodb.net/?retryWrites=true&w=majority&appName=TaskMasterCAHub").then(()=>
 {
     console.log("Database is connected successfully");  
 }
