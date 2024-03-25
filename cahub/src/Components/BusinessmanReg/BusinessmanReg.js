@@ -25,7 +25,7 @@ const BusinessmanRegistration = () => {
         e.preventDefault();
         try {
             console.log(formData);
-            const res = await fetch('http://10.40.13.53:8000/api/register', {
+            const res = await fetch('https://fintech-innovators.onrender.com/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

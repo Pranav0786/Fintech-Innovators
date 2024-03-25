@@ -27,7 +27,7 @@ const LoginSignup = () => {
     console.log(formData) ;
     e.preventDefault();
     try {
-        const res = await fetch('http://10.40.13.53:8000/api/signup', {
+        const res = await fetch('https://fintech-innovators.onrender.com/api/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
