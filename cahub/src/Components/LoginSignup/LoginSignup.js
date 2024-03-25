@@ -37,6 +37,7 @@ const LoginSignup = () => {
         const response = await res.json();
         if (response.success) {
             console.log(response.message);
+            // window.location.href = ''
         } else {
             console.error(response.message);
         }
